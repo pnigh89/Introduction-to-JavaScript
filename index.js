@@ -101,7 +101,7 @@ function food (weight, age) {
         return weight *.04
     }
 }
- console.log(food(8, .5));
+ console.log(food(8, .3));
 
 
 
@@ -112,20 +112,58 @@ function food (weight, age) {
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+// 0=rock 1=paper 2=scissors
+
+  function play (RPS) {
+      let CPU = Math.floor(Math.random(0) * Math.floor(3));
+    console.log(CPU);
+    // if(CPU === 0){
+    //     if (RPS = 'paper'){
+    //         return "Winner!";
+    //     }
+    //     else {
+    //         return "Loser!";
+    //     }
+    // }
+    // if(CPU === 1){
+    //     if (RPS = 'scissors') {
+    //         return "Winner!";
+    //     }
+    //     else {
+    //         return "Loser!";
+    //     }
+    // }
+    // if(CPU === 2){
+    //     if (RPS = 'rock') {
+    //         return "Winner!";
+    //     }
+    //     else {
+    //         return "Loser!";
+    //     }
+    // }
+   
+}
+console.log(play('paper'));  
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function convert(km){
+    return km * .62
+}
 
-
+console.log ('Miles = ' + convert(5))
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function convert(feet){
+    return feet * 30.38
+}
 
+console.log ('Centimeters = ' + convert(5))
 
 
 
@@ -133,8 +171,12 @@ function food (weight, age) {
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
+function annoyingSong(num){  
+for(let i = num; num>0; num--){
+      return num + "bottles of soda on the wall, " + num + " bottles of soda, take one down, pass it around " + (num - 1) + " bottles of soda on the wall"
+    }
+}
+console.log(annoyingSong(88))
 
 
 
@@ -147,6 +189,24 @@ function food (weight, age) {
 //60s should be D 
 //and anything below 60 should be F
   
+function grade(num){
+    if (num >= 90){
+        return "A";
+    }
+    else if (num >=80 && num <90){
+        return "B";
+    }
+    else if (num >=70 && num <80){
+        return "C";
+    }
+    else if (num >=60 && num <70){
+        return "D";
+    }
+    else if (num <600){
+        return "F";
+    }
+}
+console.log(grade(75))
 
   
   
