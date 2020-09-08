@@ -1,17 +1,34 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+    let votingAge = 19;
+
+    if (votingAge > 18) {
+        console.log("true");
+    }
+    
+
 
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let Var1 = 20;
+let Var2 = 40;
+if (Var2 = 40) {
+    Var1 = 42
+}
+console.log(Var1);
 
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+
+let string = "1999";
+string = Number(string);
+console.log(string);
 
 
 
@@ -19,7 +36,9 @@
 
 //Task d: Write a function to multiply a*b 
 
-
+function multiply (a, b){
+    return a * b;
+}
 
 
 
@@ -27,7 +46,11 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+function dogyears (age){
+    return age * 7;
+}
 
+console.log(dogyears(7));
 
 
 
@@ -49,7 +72,36 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function food (weight, age) {
+    if (weight <= 5 && age >=1) {
+        return weight * .05
+    }
 
+    else if (weight >= 6 && weight <=10 && age>=1) {
+        return weight * .04
+    }
+
+    else if (weight >= 11 && weight <= 15 && age>=1) {
+        return weight * .03
+    }
+
+    else if (weight > 15 && age >= 1) {
+        return weight * .02
+    }
+
+    else if (age >= .167 && age <= .333 ) {
+        return weight * .1
+    }
+
+    else if (age >= .34 && age <= .583) {
+        return weight * .05
+    }
+
+    else if (age >= .584 && age <= .999) {
+        return weight *.04
+    }
+}
+ console.log(food(8, .5));
 
 
 
