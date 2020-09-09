@@ -114,38 +114,53 @@ function food (weight, age) {
 
 // 0=rock 1=paper 2=scissors
 
-  function play (RPS) {
-      let CPU = Math.floor(Math.random(0) * Math.floor(3));
-    console.log(CPU);
-    // if(CPU === 0){
-    //     if (RPS = 'paper'){
-    //         return "Winner!";
-    //     }
-    //     else {
-    //         return "Loser!";
-    //     }
-    // }
-    // if(CPU === 1){
-    //     if (RPS = 'scissors') {
-    //         return "Winner!";
-    //     }
-    //     else {
-    //         return "Loser!";
-    //     }
-    // }
-    // if(CPU === 2){
-    //     if (RPS = 'rock') {
-    //         return "Winner!";
-    //     }
-    //     else {
-    //         return "Loser!";
-    //     }
-    // }
-   
-}
-console.log(play('paper'));  
-  
 
+
+  function RPS(select){
+
+ 
+  let CPU =  Math.floor(Math.random()*3);
+  console.log(CPU)
+
+  if (select === "rock"){
+    num = 0;
+}
+
+else if (select ==="paper"){
+    num = 1;
+}
+
+else if (select==="scissors"){
+    num = 2;
+}
+
+ if (num===0 && CPU ===1){
+      return "Loser!";
+  }
+  
+  else if (num===0 && CPU===2){
+      return "Winner!";
+  }
+  else if (num===1 && CPU===0){
+      return "Winner!";
+  }
+  else if (num===1 && CPU===2){
+      return "Loser!";
+  }
+  else if (num===2 && CPU===0){
+      return "Loser!"
+  }
+  else if (num===2 && CPU===1){
+      return "Winner!";
+  }
+  else if (num===CPU){
+      return "Tie!";
+  }
+
+  }
+
+  console.log(RPS("rock"))
+  
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
